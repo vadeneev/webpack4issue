@@ -1,5 +1,6 @@
 # webpack4issue
 webpack4 Self-Defining Function inject optimization error
+## known issue: https://github.com/webpack-contrib/uglifyjs-webpack-plugin/issues/264
 
 ```javascript
 export const add = () => {
