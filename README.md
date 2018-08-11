@@ -1,5 +1,5 @@
 # webpack4issue
-webpack4 function inject optimization error
+webpack4 Self-Defining Function inject optimization error
 
 ```javascript
 export const add = () => {
@@ -17,3 +17,20 @@ init expected to run only once (as it was with webpack 3)
 
 after migration to webpack4 init runs every time you call add() in production mode
 
+current output with webpack4:
+
+```javascript
+INIT
+ADD
+INIT
+ADD
+INIT
+ADD
+```
+expected:
+```javascript
+INIT
+ADD
+ADD
+ADD
+```
